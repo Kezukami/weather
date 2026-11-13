@@ -1,38 +1,101 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: min(600px, calc(100% - 32px));
+  min-height: 440px;
+  margin: 80px auto;
+  padding: 24px 24px 32px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-name {
+  margin: 0 0 20px;
+  color: rgb(17, 144, 0);
+  font-size: 2.3rem;
+}
+
+.city-search {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  background-color: #e5eef0;
+  color: #333;
+  font-size: 16px;
+}
+
+.city-search:focus {
+  border-color: #119000;
+}
+
+.city-name {
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.date {
+  color: #777;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.icon-temp {
+  color: #1e2432;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.deg {
+  vertical-align: super;
+  font-size: 1.3rem;
+}
+
+.des-wind {
+  color: #666;
+  font-weight: 500;
+}
+
+.error-message {
+  margin-top: 24px;
+  color: #d32f2f;
+  font-size: 20px;
+}
+
+.Loader {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 24px;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-icon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
